@@ -40,7 +40,7 @@ add_action('gform_after_submission_2', function($entry, $form) {
             'tech_team_size' => intval(rgar($entry, '6')),
             'business_model' => rgar($entry, '7'),
             'tech_complexity' => rgar($entry, '8'),
-            'workforce_deployment' => $workforce_deployment
+            'workforce_deployment' => rgar($entry, '9')
         );
         
         error_log('LPA Debug: Assessment data to insert: ' . print_r($assessment_data, true));
